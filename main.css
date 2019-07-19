@@ -8,10 +8,9 @@ h1, h2, h3, h4{
     margin: 0;
 }
 *{
-    transition: .7s;
+    transition: .7s linear;
 }
  *:before, *:after {
-    /*box-sizing: border-box;*/
 }
 .container{
     margin: 0 auto;
@@ -42,6 +41,9 @@ h1, h2, h3, h4{
                             /*HEADER*/
 
 header{
+    overflow-x: hidden;
+
+    box-sizing: border-box;
     margin-bottom: 35px;
 }
 .header{
@@ -76,15 +78,6 @@ header{
         margin-left:5px;
     }
 }
-/*@media ( max-width: 570px) {*/
-    /*.nav__item{*/
-    /*margin: 2px 0;*/
-    /*padding: 2px 0;*/
-    /*flex-basis: 100%;*/
-
-    /*}*/
-/*}*/
-
 .btn_menu, .btn_get{
     padding: 0;
     border: none;
@@ -221,9 +214,13 @@ h1{
     display: block;
     margin-bottom: 55px;
 }
-.iphone__pos{
-    transform: translateX(15px); /*картинка не ровная, требовала сдвига 15*/
+
+@media ( min-width: 571px) {
+    .iphone__pos{
+        transform: translateX(15px); /*картинка не ровная, требовала сдвига 15*/
+    }
 }
+
 @media ( max-width: 570px) {
     .iphone__pos img{
         width: 310px;
@@ -237,8 +234,10 @@ h1{
 
 
 .nav__mobile{
+    transform: translateY(15px);
+    box-sizing: border-box;
     display: none;
-    margin: 20px auto;
+    margin: 0 auto 20px;
     max-width: 570px;
     position: relative;
     height: 40px;
@@ -262,6 +261,7 @@ h1{
     display: none;
 }
 label{
+    transition: 1s linear;
     display: block;
     position: absolute;
     top: 0;
@@ -278,7 +278,7 @@ label{
     line-height: 40px;
     width: 90%;
     margin: 0 auto;
-    transform: translateY(20%);
+    transform: translateY(18.5%);
     max-height: 0;
     font-size: 0;
     overflow: hidden;
@@ -722,16 +722,7 @@ main{
 }
 .plan__container{
     flex-basis: 50%;
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
 }
-/*.plan__flex{*/
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    /*flex-wrap: wrap;*/
-    /*vertical-align: center;*/
-
-/*}*/
 @media ( max-width: 1099px) {
     .item__plan--1{
         margin-left: 50%;
@@ -741,14 +732,6 @@ main{
         display: inline;
     }
 }
-
-.box--1 , .box--2  {
-
-}
-
-/*.plan__container {*/
-    /**/
-/*}*/
 .plan{
     padding-top: 155px;
     padding-bottom: 190px;
@@ -858,6 +841,7 @@ main{
     border-radius: 10px;
     background-color: #ebebed;
 }
+
 @media (min-width: 970px) and (max-width: 1099px) {
     .box--1 , .box--2  {
         margin-left: 350%;
