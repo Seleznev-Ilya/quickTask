@@ -3,7 +3,7 @@
 <head>
    <meta charset = "UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
-   <link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>
+   <!--<link href="//netdna.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.css" rel="stylesheet"/>-->
    <link href="https://fonts.googleapis.com/css?family=Varela+Round&display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
    <link rel="stylesheet" href="main.css">
@@ -190,12 +190,41 @@
          <div class="people">
             <div class="container">
 
-               <div class="people__ul">
-                  <ul>
-                     <li><img class="people--non" src = "images/main/4/Photo%20(1).png" alt = ""></li>
-                     <li><img class="li__center" src = "images/main/4/Photo%20(4).png" alt = ""></li>
-                     <li><img class="people--non" src = "images/main/4/Photo%20(3).png" alt = ""></li>
-                  </ul>
+               <!--<div class="people__ul">-->
+                  <!--<ul>-->
+                     <!--<li><img class="people&#45;&#45;non" src = "images/main/4/Photo%20(1).png" alt = ""></li>-->
+                     <!--<li><img class="li__center" src = "images/main/4/Photo%20(4).png" alt = ""></li>-->
+                     <!--<li><img class="people&#45;&#45;non" src = "images/main/4/Photo%20(3).png" alt = ""></li>-->
+                  <!--</ul>-->
+               <!--</div>-->
+
+               <!--<div class="first_slider">-->
+                  <!--<img src = "images/main/4/Photo%20(1).png" class = "slid_item">-->
+
+                  <!--<img src = "images/main/4/Photo%20(2).png" class = "slid_item">-->
+
+                  <!--<img src = "images/main/4/Photo%20(3).png" class = "slid_item">-->
+               <!--</div>-->
+
+               <div class="slider">
+                  <div id="area_slider">
+                     <div class="wrapper">
+                        <img src = "images/main/4/Photo%20(3).png" alt = "" class = "slid_item">
+                     </div>
+                     <div class="wrapper">
+                        <img src = "images/main/4/Photo%20(1).png" alt = "" class = "slid_item">
+                     </div>
+                     <div class="wrapper">
+                        <img src = "images/main/4/Photo%20(2).png" alt = "" class = "slid_item">
+                     </div>
+                     <div class="wrapper">
+                        <img src = "images/main/4/Photo%20(3).png" alt = "" class = "slid_item">
+                     </div>
+                     <div class="wrapper">
+                        <img src = "images/main/4/Photo%20(1).png" alt = "" class = "slid_item">
+                     </div>
+
+                  </div>
                </div>
 
                <div class="arrow__wrapper">
@@ -203,10 +232,10 @@
                      <div class="arrow__f">
 
                         <div class = "item__arrows">
-                           <a href = "#"><img src = "images/main/4/Arrow.png" alt = ""></a>
+                           <a><img id="img1" src = "images/main/4/Arrow.png"  onclick="left();"></a>
                         </div>
                         <div class = "item__arrows">
-                           <a href = "#"><img src = "images/main/4/Arrow%20(1).png" alt = ""></a>
+                           <a><img id="img2" src = "images/main/4/Arrow%20(1).png" onclick="right();"></a>
                         </div>
 
                      </div>
@@ -374,6 +403,7 @@
          </div>
       </div>
    </footer>
+   <script src="minslid.js"></script>
 
 </body>
 </html>
